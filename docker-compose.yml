@@ -23,4 +23,4 @@ networks:
     external: true
 
 volumes:
-  btc-testnet-data:
+  btg-testnet-data:
