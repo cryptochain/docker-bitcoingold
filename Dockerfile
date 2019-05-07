@@ -20,7 +20,7 @@ RUN chmod +x /usr/local/bin/btg_oneshot
 
 VOLUME ["/bitcoingold"]
 
-EXPOSE 8832 8833
+EXPOSE 8832 8833 18332 18338
 
 WORKDIR /bitcoingold
 

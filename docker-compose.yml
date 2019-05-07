@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+  bitcoingold-testnet:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "10"
+    networks:
+      - crypto-p2p-services
+    ports:
+      - 18332:18332
+      - 18338:18338
+    volumes:
+      - btg-testnet-data:/bitcoingold
+      - ./bitcoingold.conf:/bitcoingold/.bitcoingold/bitcoingold.conf
+
+networks:
+  crypto-p2p-services:
+    external: true
+
+volumes:
+  btc-testnet-data:
